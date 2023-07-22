@@ -30,9 +30,4 @@ class NobelData:
         winner_sur.sort()
         return winner_sur
 
-nd = NobelData()
-winner_sur = nd.search_nobel("2001", "economics")
-print(winner_sur)
-
-surnames = ["chemistry", 'economics', 'literature', 'peace', 'physics', 'medicine']
 
