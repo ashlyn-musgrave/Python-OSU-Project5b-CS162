@@ -12,7 +12,7 @@ class NobelData:
     def __init__(self):
         """This method reads the file and stores it in a data member"""
         with open('nobels.json', 'r') as infile:
-            data_list = json.load(infile)
+            self._data = json.load(infile)
 
     def search_nobel(self, year, category):
         """This method takes as parameters a year and a category, and returns a sorted list
@@ -29,3 +29,10 @@ class NobelData:
             winner_sur.append(winners[i]['surname'])
         winner_sur.sort()
         return winner_sur
+
+nd = NobelData()
+winner_sur = nd.search_nobel("2001", "economics")
+print(winner_sur)
+
+surnames = ["chemistry", 'economics', 'literature', 'peace', 'physics', 'medicine']
+
